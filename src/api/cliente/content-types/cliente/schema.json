@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Cliente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "assinaturas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::assinatura.assinatura",
+      "mappedBy": "cliente"
+    },
+    "email": {
+      "type": "email"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "temperament": {
+      "type": "enumeration",
+      "enum": [
+        "F",
+        "C",
+        "S",
+        "M",
+        "N"
+      ]
+    },
+    "password": {
+      "type": "password"
+    },
+    "is": {
+      "type": "uid"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "end_date": {
+      "type": "date"
+    }
+  }
+}

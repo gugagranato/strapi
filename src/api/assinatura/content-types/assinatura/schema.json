@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assinaturas",
+  "info": {
+    "singularName": "assinatura",
+    "pluralName": "assinaturas",
+    "displayName": "Assinatura",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curso.curso"
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "assinaturas"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
