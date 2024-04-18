@@ -849,16 +849,12 @@ export interface ApiAulaAula extends Schema.CollectionType {
     lauched_date: Attribute.DateTime;
     duration: Attribute.Integer;
     description: Attribute.Text;
-    modulo: Attribute.Relation<
-      'api::aula.aula',
-      'oneToOne',
-      'api::modulo.modulo'
-    >;
     materials: Attribute.Relation<
       'api::aula.aula',
       'oneToMany',
       'api::material.material'
     >;
+    url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1070,11 +1066,6 @@ export interface ApiModuloModulo extends Schema.CollectionType {
       'api::modulo.modulo',
       'oneToMany',
       'api::material.material'
-    >;
-    aula: Attribute.Relation<
-      'api::modulo.modulo',
-      'oneToOne',
-      'api::aula.aula'
     >;
     materials_modulo: Attribute.Relation<
       'api::modulo.modulo',

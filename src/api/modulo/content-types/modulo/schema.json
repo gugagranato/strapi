@@ -31,12 +31,6 @@
       "relation": "oneToMany",
       "target": "api::material.material"
     },
-    "aula": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::aula.aula",
-      "mappedBy": "modulo"
-    },
     "materials_modulo": {
       "type": "relation",
       "relation": "manyToMany",

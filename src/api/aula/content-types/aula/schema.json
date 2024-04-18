@@ -41,17 +41,14 @@
     "description": {
       "type": "text"
     },
-    "modulo": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::modulo.modulo",
-      "inversedBy": "aula"
-    },
     "materials": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::material.material",
       "mappedBy": "aula"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
